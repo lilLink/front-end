@@ -37,5 +37,11 @@ const httpOptions = {
       console.log("[update company]");
       return this.http.put<Company>(this.companyUrl + "/company/add/" + company.companyId, company, httpOptions);
     }
+
+    public findById(companyId: string) {
+        console.log("[find by id]");
+        return this.http.get<Company>(this.companyUrl + "/company/" + companyId, httpOptions);
+      }
+    
   
   }
