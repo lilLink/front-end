@@ -1,0 +1,49 @@
+<div>
+  <form>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Begin and end time</span>
+      </div>
+      <input type="date" class="form-control" name="beginTime" [(ngModel)] = "ticket.beginTime" #beginTime="ngModel">
+      <input type="date" class="form-control" name="endTime" [(ngModel)] = "ticket.endTime" #endTime="ngModel">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">From and to city</span>
+      </div>
+      <input type="text" class="form-control" name="fromCity" [(ngModel)] = "ticket.fromCity" #fromCity="ngModel">
+      <input type="text" class="form-control" name="toCity" [(ngModel)] = "ticket.toCity" #toCity="ngModel">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Ticket Class</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Ticket Class" aria-describedby="inputGroup-sizing-default" [(ngModel)] = "ticket.ticketClass" name="ticketClass" #ticketClass="ngModel">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Price" aria-describedby="inputGroup-sizing-default" [(ngModel)] = "ticket.price" name="price" #price="ngModel">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Description" aria-describedby="inputGroup-sizing-default" [(ngModel)] = "ticket.ticketDescription" name="ticketDescription" #ticketDescription="ngModel">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Place</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Place" aria-describedby="inputGroup-sizing-default" [(ngModel)] = "ticket.place" name="place" #place="ngModel">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Flight Number</span>
+      </div>
+      <input type="number" class="form-control" aria-label="Flight Number" aria-describedby="inputGroup-sizing-default" [(ngModel)] = "ticket.flightNumber" name="flightNumber" #flightNumber="ngModel">
+    </div>
+    <button class="btn btn-success" (click)="insert()">Create</button>
+  </form>
+</div>

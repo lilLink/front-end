@@ -1,0 +1,43 @@
+
+  <div class="col-md-12">
+    <h2 class="text-center">Create Company</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" [(ngModel)]="company.name" placeholder="Name" class="form-control" id="name" name="name">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Type</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Type" aria-describedby="inputGroup-sizing-default">
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" [(ngModel)]="company.description" placeholder="Description" class="form-control"
+          id="description" name="description">
+      </div>
+  
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input type="text" [(ngModel)]="company.website" placeholder="Website" class="form-control" id="website"
+          name="website">
+      </div>
+
+  
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" [(ngModel)]="company.phoneNumber" placeholder="Phone" class="form-control" id="phone"
+          name="phone">
+      </div>
+  
+      <div *ngIf="company.companyId == null">
+        <button class="btn btn-primary" >Create</button>
+      </div>
+      <div *ngIf="company.companyId != null">
+        <button class="btn btn-success" >Update</button>
+      </div>
+    </form>
+  </div>

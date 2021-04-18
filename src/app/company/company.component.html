@@ -1,0 +1,33 @@
+<a routerLink="/company">List of Companies</a>
+<a routerLink="/company/add">Create Company</a>
+
+<div class="col-md-12">
+  <h2>List of Companies</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="d-none">Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Website</th>
+        <th>Phone</th>
+        <th>TypeCompany</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies">
+        <td class="d-none">{{company.companyId}}</td>
+        <td>{{company.name}}</td>
+        <td>{{company.description}}</td>
+        <td>{{company.website}}</td>
+        <td>{{company.phoneNumber}}</td>
+        <td>{{company.typeCompany}}</td>
+        <td>
+          <a routerLink="/updateCompany/{{company.companyId}}" class="btn btn-success">Update</a>
+          <button class="btn btn-danger" (click)="deleteById(company)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
